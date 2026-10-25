@@ -1,0 +1,164 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b1120;
+  color: #eef4ff;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.topbar {
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: #101a2b;
+  border-bottom: 1px solid #293953;
+}
+
+main {
+  max-width: 900px;
+  margin: 26px auto;
+  padding: 0 16px;
+}
+
+.panel,
+.emergency {
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #293953;
+  border-radius: 16px;
+  background: #111c2e;
+}
+
+p,
+.small,
+footer {
+  color: #a9bad4;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.topic,
+.secondary {
+  background: #1a2940;
+  color: white;
+  border: 1px solid #30425e;
+  border-radius: 24px;
+  padding: 10px 13px;
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin: 12px 0 7px;
+  font-weight: bold;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 13px;
+  background: #090f1d;
+  color: #eef4ff;
+  border: 1px solid #30425e;
+  border-radius: 9px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+}
+
+.consent input {
+  width: auto;
+}
+
+.primary {
+  width: 100%;
+  padding: 15px;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 9px;
+  background: #53dcc7;
+  color: #06201d;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.emergency {
+  border: 2px solid #ef4444;
+  background: #281522;
+}
+
+.emergency h2 {
+  color: #ffaaaa;
+}
+
+.emergency button,
+.call-btn {
+  display: inline-block;
+  margin: 5px 6px 5px 0;
+  padding: 12px 15px;
+  border: 0;
+  border-radius: 8px;
+  background: #dc2626;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emergency .secondary {
+  background: #344054;
+}
+
+footer {
+  text-align: center;
+  padding: 18px;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+  }
+
+  .panel,
+  .emergency {
+    padding: 17px;
+  }
+}
