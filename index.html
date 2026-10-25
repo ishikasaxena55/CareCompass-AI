@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareCompass AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <strong>✚ CareCompass AI</strong>
+    <span>Your care companion · Prototype</span>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1>What would you like help with?</h1>
+      <p>Start with a question or choose a topic below.</p>
+
+      <div class="topics">
+        <button type="button" class="topic" data-prompt="I have a headache">🤕 Headache</button>
+        <button type="button" class="topic" data-prompt="I feel stressed and anxious">🌿 Stress & wellbeing</button>
+        <button type="button" class="topic" data-prompt="Help me find the right care">🩺 Find the right care</button>
+        <button type="button" class="topic" data-prompt="I want general tips for better sleep">🌙 Sleep better</button>
+      </div>
+
+      <form id="care-form">
+        <label for="concern">Describe your concern</label>
+        <textarea id="concern" maxlength="1500" required
+          placeholder="Tell us what is concerning you..."></textarea>
+
+        <div class="row">
+          <div>
+            <label for="location">Location (optional)</label>
+            <input id="location" placeholder="City or area">
+          </div>
+          <div>
+            <label for="language">Response language</label>
+            <select id="language">
+              <option>English</option>
+              <option>Hindi</option>
+              <option>Hinglish</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" required>
+          I understand this is informational support, not a medical diagnosis.
+        </label>
+
+        <button class="primary" id="submit-btn" type="submit">
+          Explore care options ↗
+        </button>
+      </form>
+      <p class="small">CareCompass AI does not diagnose or replace a clinician.</p>
+    </section>
+
+    <section class="emergency">
+      <h2>🚨 Need urgent help?</h2>
+      <p>If someone may be in immediate danger in India, call 112.
+         Do not wait for an app response.</p>
+
+      <button id="buzzer-btn" type="button">🔊 Sound emergency alarm</button>
+      <button id="stop-btn" class="secondary" type="button">Stop alarm</button>
+      <a class="call-btn" href="tel:112">📞 Call 112</a>
+      <p id="alarm-status" aria-live="polite">Alarm is off.</p>
+    </section>
+
+    <section class="panel" id="results" hidden>
+      <h2 id="result-summary">Your care guidance</h2>
+      <p id="result-guidance"></p>
+      <h3>Suggested next steps</h3>
+      <ul id="result-steps"></ul>
+      <p id="result-notice" class="small"></p>
+    </section>
+  </main>
+
+  <footer>CareCompass AI · Demo prototype · Not a diagnosis or emergency service.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
